@@ -1,0 +1,40 @@
+export const API_ENDPOINTS = {
+  AUTH: {
+    LOGIN: '/auth/login',
+    LOGOUT: '/auth/logout',
+    ME: '/auth/me',
+  },
+  PATIENTS: '/patients',
+  TESTS: '/tests',
+  SAMPLES: '/samples',
+  RESULTS: '/results',
+};
+
+export const ROLES = {
+  ADMIN: 'ROLE_ADMIN',
+  DOCTOR: 'ROLE_DOCTOR',
+  LAB_TECHNICIAN: 'ROLE_LAB_TECHNICIAN',
+  RECEPTIONIST: 'ROLE_RECEPTIONIST',
+};
+
+export const SAMPLE_STATUS = {
+  COLLECTED: 'COLLECTED',
+  RECEIVED: 'RECEIVED',
+  PROCESSING: 'PROCESSING',
+  COMPLETED: 'COMPLETED',
+  REJECTED: 'REJECTED',
+};
+
+export const ORDER_STATUS = {
+  PENDING: 'PENDING',
+  IN_PROGRESS: 'IN_PROGRESS',
+  COMPLETED: 'COMPLETED',
+  CANCELLED: 'CANCELLED',
+};
+
+export const RESULT_STATUS = {
+  PENDING: 'PENDING',
+  PRELIMINARY: 'PRELIMINARY',
+  VERIFIED: 'VERIFIED',
+  CORRECTED: 'CORRECTED',
+};

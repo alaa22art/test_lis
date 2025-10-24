@@ -42,8 +42,9 @@ test_lis/
 
 - Java 17 or higher
 - Node.js 18 or higher
-- Maven 3.8+
 - Docker and Docker Compose (for PostgreSQL)
+
+**Note:** Maven installation is **not required** - this project includes Maven Wrapper (mvnw/mvnw.cmd) which will automatically download the correct Maven version.
 
 ## Getting Started
 
@@ -72,10 +73,18 @@ This will start:
 
 Navigate to the backend directory and run:
 
+**For Windows (Command Prompt or PowerShell):**
 ```bash
 cd backend
-mvn clean install
-mvn spring-boot:run
+mvnw.cmd clean install
+mvnw.cmd spring-boot:run
+```
+
+**For Linux/Mac:**
+```bash
+cd backend
+./mvnw clean install
+./mvnw spring-boot:run
 ```
 
 The backend API will be available at:
@@ -122,8 +131,12 @@ The application includes the following main tables:
 ### Backend Development
 
 - Use Spring Boot DevTools for hot reload
-- Run tests: `mvn test`
-- Build: `mvn clean package`
+- Run tests:
+  - Windows: `mvnw.cmd test`
+  - Linux/Mac: `./mvnw test`
+- Build:
+  - Windows: `mvnw.cmd clean package`
+  - Linux/Mac: `./mvnw clean package`
 
 ### Frontend Development
 
@@ -176,9 +189,18 @@ VITE_APP_NAME=LIS Application
 ## Deployment
 
 ### Backend
+
+**For Windows:**
 ```bash
 cd backend
-mvn clean package
+mvnw.cmd clean package
+java -jar target/lis-backend-1.0.0.jar
+```
+
+**For Linux/Mac:**
+```bash
+cd backend
+./mvnw clean package
 java -jar target/lis-backend-1.0.0.jar
 ```
 
